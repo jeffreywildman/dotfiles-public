@@ -24,4 +24,4 @@ export GREP_OPTIONS='--color=auto';
 export HOMEBREW_EDITOR='mvim';
 
 # Specify location for Python virtual environments
-export WORKON_HOME='${HOME}/Envs';
+export WORKON_HOME="${HOME}/Envs";
