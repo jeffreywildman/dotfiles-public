@@ -19,3 +19,9 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+# Use MacVim for homebrew formula editing
+export HOMEBREW_EDITOR='mvim';
+
+# Specify location for Python virtual environments
+export WORKON_HOME='${HOME}/Envs';

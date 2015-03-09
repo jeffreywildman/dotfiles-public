@@ -1,0 +1,20 @@
+# Add the ~/local/bin to the `$PATH`
+export PATH=${HOME}/local/bin:${PATH};
+
+# Only augment `$PATH` if brew is installed
+if which brew > /dev/null; then
+
+  if [ -d "$(brew --prefix)/sbin" ]; then
+    export PATH=$(brew --prefix)/sbin:${PATH};
+  fi;
+
+  if [ -d "$(brew --prefix)/bin" ]; then
+    export PATH=$(brew --prefix)/bin:${PATH};
+  fi;
+
+  # User newer GNU core utilities (those that come with OS X are outdated).
+  if [ -d "$(brew --prefix coreutils)/libexec/gnubin" ]; then
+    export PATH=$(brew --prefix coreutils)/libexec/gnubin:${PATH};
+  fi;
+
+fi;
