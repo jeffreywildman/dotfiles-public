@@ -1,0 +1,49 @@
+# Bibtool Resource File: http://www.gerd-neugebauer.de/software/TeX/BibTool/bibtool.pdf
+# bibtool ./input.bib -o ./output.bib
+
+# Casing
+
+# specify casing of entry types
+new.entry.type{article}
+new.entry.type{book}
+new.entry.type{booklet}
+new.entry.type{conference}
+new.entry.type{inbook}
+new.entry.type{incollection}
+new.entry.type{inproceedings}
+new.entry.type{manual}
+new.entry.type{mastersthesis}
+new.entry.type{misc}
+new.entry.type{phdthesis}
+new.entry.type{proceedings}
+new.entry.type{techreport}
+new.entry.type{unpublished}
+
+symbol.type              = lower    # translate symbols (macro names) into lower case
+preserve.key.case        = on       # do not translate keys lower case
+
+
+# Alignment
+
+print.equal.right        = on       # align equals sign right in normal entries
+print.wide.equal         = on       # force spaces around equals sign
+
+print.indent             = 2        # indent normal entries to specified column
+print.align              = 18       # align the = of normal entries at specified column
+print.align.string       = 18       # align the = of string entries at specified column
+print.align.key          = 18       # align the key of normal entries at specified column
+print.line.length        = 200      # break lines at specified column
+
+
+# Other
+
+pass.comments            = on       # do not discard comments but attach to following entry
+expand.macros            = off      # turn off macro (string) expansion in fields
+
+suppress.initial.newline = on       # suppress initial newline before normal records
+sort                     = off      # disable sorting of entries
+sort.macros              = off      # disable sorting of string entries
+print.braces             = off      # switch to the use of quotes for expanded macros instead of braces
+print.use.tab            = off      # do not use TAB character to compress multiple spaces
+
+quiet                    = off      # do not suppress warnings
