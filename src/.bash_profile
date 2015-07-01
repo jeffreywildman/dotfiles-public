@@ -46,3 +46,8 @@ fi;
 if which brew > /dev/null && [ -f "$(brew --prefix)/bin/virtualenvwrapper.sh" ]; then
   source "$(brew --prefix)/bin/virtualenvwrapper.sh";
 fi;
+
+# Enable shims and autocompletion for ruby
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
+fi;
