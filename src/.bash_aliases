@@ -50,5 +50,3 @@ alias rm="rm -i";
 alias climat="matlab -nosplash -nodesktop";
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg";
 alias acroread="open -a 'Adobe Acrobat Pro'";
-alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape";
-alias gimp="/Applications/Gimp.app/Contents/MacOS/Gimp";
