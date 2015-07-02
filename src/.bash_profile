@@ -37,6 +37,12 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
   complete -o default -o nospace -F _git g;
 fi;
 
+# Custom gitignore and gitattributes based on home directory location
+if which git > /dev/null; then
+  git config --global core.excludesfile "~/.gitignore";
+  git config --global core.attributesfile "~/.gitittributes";
+fi;
+
 # Enable tab completion for awscli
 if which aws_completer > /dev/null; then
   complete -C aws_completer aws;
