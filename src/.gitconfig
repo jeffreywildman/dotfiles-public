@@ -88,7 +88,7 @@
   # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-  # Make `git rebase` safer on OS X
+  # Make `git rebase` safer on macOS
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
 
@@ -123,19 +123,15 @@
   changed = red
   untracked = cyan
 
-[credential]
-
-  helper = osxkeychain
-
 [diff]
 
   # Detect copies as well as renames
   renames = copies
 
-[difftool "sourcetree"]
+[diff "bin"]
 
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+  # Use `hexdump` to diff binary files
+  textconv = hexdump -v -C
 
 [help]
 
@@ -148,11 +144,6 @@
   log = true
 
   tool = vimdiff
-
-[mergetool "sourcetree"]
-
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
 
 [push]
 

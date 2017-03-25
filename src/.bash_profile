@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Load the shell dotfiles, and then some:
 # * ~/.bash_path can be used to extend `$PATH`.
 # * ~/.bash_extra can be used for other settings you don’t want to commit.
@@ -26,8 +28,8 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-  source "$(brew --prefix)/etc/bash_completion";
+if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+  source "$(brew --prefix)/share/bash-completion/bash_completion";
 elif [ -f /etc/bash_completion ]; then
   source /etc/bash_completion;
 fi;
@@ -48,12 +50,12 @@ if which aws_completer > /dev/null; then
   complete -C aws_completer aws;
 fi;
 
-# Load extensions to virtualenv
-if which brew > /dev/null && [ -f "$(brew --prefix)/bin/virtualenvwrapper.sh" ]; then
-  source "$(brew --prefix)/bin/virtualenvwrapper.sh";
+# Enable shims and autocompletion for pyenv
+if which pyenv > /dev/null; then
+  eval "$(pyenv init -)";
 fi;
 
-# Enable shims and autocompletion for ruby
+# Enable shims and autocompletion for rbenv
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi;

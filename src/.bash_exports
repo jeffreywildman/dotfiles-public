@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Make vim the default editor.
 export EDITOR='vim';
 
@@ -16,9 +18,6 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
-
-# Use MacVim for homebrew formula editing
-export HOMEBREW_EDITOR='mvim';
 
 # Specify location for Python virtual environments
 export WORKON_HOME="${HOME}/Envs";
